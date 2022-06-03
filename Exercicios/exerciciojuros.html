@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="LIGHTBLUE">
+    <FONT FACE="CALIBRI" COLOR="RED" SIZE="8"> CÁLCULO</FONT> <BR><HR>
+    <input id="valor" type="text" placeholder="Digite o valor" /><hr>
+    <input id="taxa" type="text" placeholder="Digite uma taxa" /> <hr>
+    <input id="parcela" type="text" placeholder="Digite qtd parcelas"><hr>
+    <button onclick="calcular()">Calcular</button>
+    <p id= "resultado"></p>
+    <script>
+        function calcular(){
+            var valor = 0 
+            if(document.getElementById("valor").value ==''){
+                alert("informe valor")
+                document.getElementById("valor").focus()
+                return
+
+            } else( valor= parseFloat(document.getElementById("valor").value)
+
+            )
+            var taxa = parseFloat(document.getElementById("taxa").value)
+            var parcela = parseFloat(document.getElementById("parcela").value)
+            var soma = valor*(taxa/100)*parcela
+            var montante = soma + valor
+            document.getElementById("resultado").innerHTML = `Valor: ${valor} X Taxa: ${taxa}% Juros: ${soma} = ${montante}`
+        }
+    </script>
+</body>
+</html>

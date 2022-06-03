@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+    <font face="calibri" color="green" size=10>Boletim </font> <br /> <hr>
+    <input id= "nome" placeholder="Digite seu nome" />
+    <button onclick="execucao()"> Calculo</button> <hr>
+    <input id="nota1" placeholder="notas"/> +
+    <input id="nota2" placeholder="notas"/> +
+    <input id="nota3" placeholder="notas"/> =
+    <input id="resultado" placeholder="resultado"/>
+    
+
+<script>
+    function execucao(){
+    var nome = document.getElementById("nome").value 
+    var nota1= parseFloat(document.getElementById("nota1").value)
+    var nota2=parseFloat (document.getElementById("nota2").value)
+    var nota3=parseFloat(document.getElementById("nota3").value)
+    var media= (nota1+nota2+nota3)/3
+    var resutado = document.getElementById("resultado").value =`${media}`
+    }
+    
+</script>
+</body>
+</html>

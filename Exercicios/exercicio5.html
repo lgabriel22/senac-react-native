@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="valor" placeholder="Digite o valor aqui"/>
+    <button onclick="calcular()" >CLIQUE AQUI</button>
+    <hr>
+    <input id="taxa" placeholder="Digite a taxa" />
+    <input id="resultado" placeholder="Resultado"/>
+
+</body>
+<script>
+    function calcular(){
+        var valor = document.getElementById("valor").value 
+        if( valor == ''){
+            alert("Digite um valor")
+        }
+        var taxa = document.getElementById("taxa").value
+        if( taxa== ''){
+            alert(" Digite uma taxa")
+        }
+        document.getElementById("resultado").value= `${valor*(taxa/100)}`
+    }
+</script>
+</html>

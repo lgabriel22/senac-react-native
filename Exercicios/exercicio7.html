@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+    <font face="calibri" color="green" size=10>Boletim </font> <br /> <hr>
+    <input id= "nota1" placeholder="Digite aqui" />
+    <button onclick="validaN()"> Calculo</button> <hr>
+  
+    
+<script>
+    function validaN(){
+        var nota1= document.getElementById("nota1").value
+        if(nota1 ==''){
+            alert("digite um valor")
+            document.getElementById("nota1").focus()
+            return
+        } else{
+            nota = parseFloat(nota1)
+        }
+    }
+    
+</script>
+</body>
+</html>

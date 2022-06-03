@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<font face="ARIAL" Size="6" color="blue">FATORIAL</font><hr>
+<body bgcolor="yellow">
+    <h1 style="background-color:lightgreen;">Digite um valor</h1>
+    <input id= "valor" type="text"/>
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function calcular(){
+        var fatorial = parseFloat(document.getElementById("valor").value)
+        var resultado = fatorial;
+        for( var i=1; i <fatorial;i++){
+            resultado *=i;
+        }
+        document.getElementById("resultado").innerHTML= resultado
+
+    }
+</script>
+</html>

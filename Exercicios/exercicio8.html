@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+    <font face="calibri" color="green" size=10>Churrasco</font> <br /> <hr>
+    <input id= "qtdpessoas" type=text placeholder="Quantidade de Pessoas" /> <hr>
+ <label> ALCATRA: $25.00 kg</label> <hr> 
+    <input id= "gpessoa" type="text" placeholder="Gramas por pessoa" /> <hr>
+    <input id= "preco" type="text" placeholder="Preço" /> <hr>
+    <button onclick="calcular()">Calcular</button><br><br>
+    <p id="resultado"></p>
+    <label>OBS: AO PASSAR DE 10 PESSOAS, É COBRADA UMA TAXA DE 3% DO VALOR TOTAL</label>
+</body>
+<script>
+    function calcular(){
+        if(document.getElementById("qtdpessoas").value == ''){
+            alert("informe quantidade de pessoas")
+            document.getElementById("qtdpessoas").focus()
+        }
+        var qtdpessoas = parseFloat(document.getElementById("qtdpessoas").value)
+        var gramas = parseFloat(document.getElementById("gpessoa").value)
+        var qtdcarne = qtdpessoas*gramas
+        var preco = 0
+        preco= document.getElementById("preco").value
+        var qtdcompra = qtdcarne/1000 
+        var total= qtdcompra * preco
+        if(qtdpessoas>10){
+            total+= total*0.10
+        }
+        document.getElementById("resultado").innerHTML= `Total= ${total.toFixed(2)} Quantidade de carne: ${qtdcompra} kg`
+        }
+</script>
+</html>
