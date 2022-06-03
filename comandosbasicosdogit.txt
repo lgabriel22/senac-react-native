@@ -1,0 +1,21 @@
+ Inicializa um repositório local
+>git init
+
+cria uma branch local
+>git branch -M main
+
+conecta um repositório local a um remoto
+>git remote add origin 
+https://github.com/lgabriel22/senac-react-native.git
+
+adiciona arquivos ao commit
+>git add <arquivos>
+
+eetua o commit no repositório local
+>git commit -m "primeiro commit"
+
+transfere os arquivos comitados localmente para o remoto
+git push -u origin main
+
+//verifica qual repositório remoto está conectado
+git remote -v
