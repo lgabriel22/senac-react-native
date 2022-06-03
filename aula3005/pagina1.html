@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Frutas</label><br>
+    <div>
+    <input id="fruta1" type="text" placeholder="Digite uma fruta">
+    </div>
+    <button onclick="listafrutas()">Adicionar</button>
+    <script>
+           var array=[]
+        function listafrutas() {
+            array.push(document.getElementById("fruta1").value)
+            localStorage.setItem("frutas", array)
+            
+            }
+
+    </script>
+
+
+
+</body>
+
+</html>

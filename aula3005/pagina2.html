@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="p">
+
+    </ol>
+        <button onclick="mostrar()">p</button>
+    <script>
+        function mostrar() {
+            var frutas = localStorage.getItem("frutas").split(",")
+            console.log(frutas);
+            linhas = ""
+            // for(item of frutas){
+            //     linhas += `<li>${item}</li>`
+            // }
+            for (let index = 0; index < frutas.length; index++) {
+                linhas += `<li>${frutas[index]}</li>`
+                
+            }
+            // for(item in frutas){
+            //     linhas += `<li>${frutas[item]}</li>`
+            // }
+            document.getElementById("p").innerHTML = linhas
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(imagem.webp);
+    color:white ;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+h2{
+    position: absolute;
+    top: 45vh;
+    
+}
+.container{
+    background: rgba(140, 33, 211, 0.6);
+    padding: 100px 20px;
+    width: 700px;
+    border-radius: 0px 30px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+}
+button{
+    display: flex;
+    justify-content: center;
+}
